@@ -36,9 +36,29 @@
 // uva00100(900, 1000) // → 174
 
 function uva00100(i, j) {
-  var cycleLength = 0 * i + 2 * j; // Obviously wrong.
-
-  return cycleLength;
+  var cycles = 0;
+  for (var x = i;x !=j; x++) {
+    for (var q = 0; x != 1; q++) {
+      if (x % 2 == 0){
+        x = x / 2;
+      } else if (x % 2 != 0){
+          x = (x * 3) + 1;
+    }
+    
+  }
+  cycles = cycles + q;
+  console.log(cycles);
+}
 }
 
-module.exports = uva00100;
+// for (var q = 0; j != i; q++) {
+//   if (j % 2 == 0)
+//     j = j / 2;
+//    else if (j % 2 != 0)
+//     j = j * 3 + 1;
+
+// }
+// return q;
+
+console.log(uva00100(1, 10));
+//module.exports = uva00100;
