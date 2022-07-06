@@ -44,9 +44,9 @@ function uva00100(i, j) {
       } else if (x % 2 != 0){
           x = (x * 3) + 1;
     }
-    
+  cycles = cycles + q;  
   }
-  cycles = cycles + q;
+  
   console.log(cycles);
 }
 }
