@@ -37,28 +37,23 @@
 
 function uva00100(i, j) {
   var cycles = 0;
-  for (var x = i;x !=j; x++) {
+  for (var n = i; n != j; n++) {
+    var x = n;
     for (var q = 0; x != 1; q++) {
-      if (x % 2 == 0){
+      if (x % 2 == 0) {
         x = x / 2;
-      } else if (x % 2 != 0){
-          x = (x * 3) + 1;
+      } else if (x % 2 != 0) {
+        x = x * 3 + 1;
+      }
+      cycles = Math.max(cycles,q);
     }
-  cycles = cycles + q;  
   }
-  
-  console.log(cycles);
-}
+  return cycles;
 }
 
-// for (var q = 0; j != i; q++) {
-//   if (j % 2 == 0)
-//     j = j / 2;
-//    else if (j % 2 != 0)
-//     j = j * 3 + 1;
+//could do an arry
+//or do math.maxwsl
 
-// }
-// return q;
 
 console.log(uva00100(1, 10));
 //module.exports = uva00100;
